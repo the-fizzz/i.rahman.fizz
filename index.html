@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RAHMAN MUSTAFIZUR | Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Progress Bar -->
+<div id="progress-bar"></div>
+
+<!-- Popup Image Viewer -->
+<div id="popup" class="popup">
+  <span class="close">&times;</span>
+  <img class="popup-img" id="popupImg">
+</div>
+
+<!-- NAV -->
+<nav>
+  <div>Rahman Mustafizur</div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#hobby">Hobby</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>RAHMAN MUSTAFIZUR</h1>
+
+  <div class="hero-row">
+    <img src="DE6170E9-C6D9-42DD-AB02-9EAA70E8A949.PNG" alt="Rahman">
+
+    <p>
+      ・Student in Tokyo<br>・Part-time Worker <br>・ Focused on growth and building a career in Japan
+      <text-align>left</text-align>
+    </p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="reveal">
+  <h1>About Me</h1>
+  <p>
+    I am a 23-year-old Bangladeshi student based in Tokyo, balancing academic studies and a part-time job daily.
+    I am currently learning Japanese and adapting to a professional environment in Japan.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="reveal">
+  <h1>Skills</h1>
+  <div class="grid">
+    <div class="card">
+      <h3>Language</h3>
+      <p>English, Japanese, Bangla, Hindi/Urdu</p>
+    </div>
+    <div class="card">
+      <h3>Technical</h3>
+      <p>Swift, iOS Dev, HTML, Web Basics</p>
+    </div>
+    <div class="card">
+      <h3>Soft Skills</h3>
+      <p>Discipline, Adaptability, Work Ethic</p>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="reveal">
+  <h1>Experience</h1>
+  <div class="grid">
+    <div class="card">
+      <h3>Part-time Job</h3>
+      <p>Teamwork, responsibility, Japanese work culture.</p>
+    </div>
+    <div class="card">
+      <h3>Student Life</h3>
+      <p>Focused on development + Japanese skills.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOBBY -->
+<section id="hobby" class="reveal">
+  <h1>Hobby</h1>
+  <div class="grid">
+    <div class="card">
+      <h3>Traveling</h3>
+      <p>Visited many places including Mt. Fuji.</p>
+    </div>
+    <div class="card">
+      <h3>Movies</h3>
+      <p>Love action, sci-fi, documentaries.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="reveal">
+  <h1>Gallery</h1>
+  <div class="grid">
+    <img src="IMG_9091.jpg" alt="">
+    <img src="IMG_Travel1.JPG" alt="">
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="reveal">
+  <button class="btn" id="contactBtn">Contact Me</button>
+
+  <div class="contact-popup" id="contactPopup">
+    <a href="mailto:i.erik.ryan14@gmail.com">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+
+    <a href="https://www.linkedin.com/in/rahman44fizz" target="_blank">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+    <a href="https://www.facebook.com/share/18NAPFos25/?mibextid=wwXIfr" target="_blank">
+      <i class="fa-brands fa-facebook"></i>
+    </a>
+    <a href="tel:+819012345678">
+  <i class="fa-solid fa-phone"></i>
+  <span>+81 70-9122-2537</span>
+</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 All Rights Reserved By Rahman Mustafizur.
+</footer>
+
+<!-- SCRIPTS (ALL FIXED) -->
+<script>
+  // Reveal animation
+  const reveals = document.querySelectorAll(".reveal");
+
+  window.addEventListener("scroll", () => {
+    reveals.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) {
+        el.classList.add("active");
+      }
+    });
+  });
+
+  // Contact popup
+  const btn = document.getElementById("contactBtn");
+  const popup = document.getElementById("contactPopup");
+
+  btn.addEventListener("click", () => {
+    popup.classList.toggle("show");
+  });
+
+  // Progress bar
+  window.addEventListener("scroll", () => {
+    const scrollTop = document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (scrollTop / height) * 100;
+    document.getElementById("progress-bar").style.width = scrolled + "%";
+  });
+</script>
+
+</body>
+</html>
