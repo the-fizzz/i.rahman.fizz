@@ -4,19 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RAHMAN MUSTAFIZUR | Portfolio</title>
-  <meta
-  name="description"
-  content="Portfolio website of Rahman Mustafizur, frontend developer based in Japan."
-/>
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome (icons) -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+
 </head>
 
 <body>
@@ -32,140 +30,161 @@
 
 <!-- NAV -->
 <nav>
-  <div>Rahman Mustafizur</div>
   <div>
-    <a href="#about">About</a>
-    <a href="#qualification">Qualification</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#hobby">Hobby</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
+    <a href="#home">Rahman Mustafizur</a>
+  </div>
+  <div>
+    <a href="#about" data-key="navAbout">About</a>
+    <a href="#qualification" data-key="navQualification">Qualification</a>
+    <a href="#skills" data-key="navSkills">Skills</a>
+    <a href="#experience" data-key="navExperience">Experience</a>
+    <a href="#hobby" data-key="navHobby">Hobby</a>
+    <a href="#gallery" data-key="navGallery">Gallery</a>
+    <a href="#contact" data-key="navContact">Contact</a>
+  </div>
+  <div class="lang-switch">
+    <button onclick="setLanguage('en')">EN</button>
+    <button onclick="setLanguage('ja')">日本語</button>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <h1>RAHMAN <span style="color: rgb(255, 255, 255); ">MUSTAFIZUR</span></h1>
+  <div>
+    <h1 id="home" style="margin-top: 200px;">RAHMAN <span>MUSTAFIZUR</span></h1>
+  </div>
 
   <div class="hero-row">
-    <img src="DE6170E9-C6D9-42DD-AB02-9EAA70E8A949.PNG" alt="Rahman" style="margin-left: 30px;">
+    <img src="DE6170E9-C6D9-42DD-AB02-9EAA70E8A949.PNG" alt="Rahman" style="margin-left: 60px; margin-bottom: 200px;">
 
-     <ul style=" text-align: left; margin-left: 80px; font-size: 30px;">
-      <li>Student in Tokyo</li>
-        <li> Part-time Worker </li>
-        <li>Focused on growth and building a career in Japan</li>
-     </ul>
+    <ul style="text-align: left; color: #aaaa; margin-left: 100px; font-size: 30px;">
+      <li data-key="hero1">Student in Tokyo</li>
+      <li data-key="hero2">Part-time Worker</li>
+      <li data-key="hero3">Focused on growth and building a career in Japan</li>
+    </ul>
   </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="reveal">
-  <h1>About Me</h1>
+  <h1 data-key="aboutTitle">About Me</h1>
   <div class="card">
-    <p>
+    <p data-key="aboutText">
       I am a 23-year-old Bangladeshi student based in Tokyo, balancing academic studies and a part-time job daily.
       I am currently learning Japanese and adapting to a professional environment in Japan.
     </p>
   </div>
 </section>
 
-<!--Qualifications-->
-
+<!-- QUALIFICATION -->
 <section id="qualification" class="reveal">
-  <h1>Qualifications</h1>
+  <h1 data-key="qualificationTitle">Qualifications</h1>
+
   <div class="card">
-  <div class="card-header">
-    <h3>Table Title</h3>
+    <div class="card-header">
+      <h3 data-key="tableTitle">Education</h3>
+    </div>
+
+    <div class="card-body">
+      <table>
+        <thead>
+          <tr>
+            <th data-key="degree">Degree</th>
+            <th data-key="institution">Institution</th>
+            <th data-key="year">Year</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td data-key="degree1">Bachelor of Science</td>
+            <td>日本国際工科専門学校</td>
+            <td>2027</td>
+          </tr>
+
+          <tr>
+            <td>日本語学校</td>
+            <td>東京国際朝日学院</td>
+            <td>2025</td>
+          </tr>
+
+          <tr>
+            <td>HSC</td>
+            <td>Kushtia Government College</td>
+            <td>2020</td>
+          </tr>
+
+          <tr>
+            <td>SSC</td>
+            <td>Shailkupa Government Pilot High School</td>
+            <td>2018</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-  <div class="card-body">
-    <table>
-      <thead>
-        <tr>
-          <th>Degree</th>
-          <th>Institution</th>
-          <th>Year</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Bachelor of Science</td>
-          <td>日本国際工科専門学校</td>
-          <td>2027</td>
-        </tr>
-        <tr>
-          <td>日本語学校</td>
-          <td>東京国際朝日学院</td>
-          <td>2025</td>
-        </tr>
-        <tr>
-          <td>HSC</td>
-          <td>Kushtia Government College</td>
-          <td>2020</td>
-        </tr>
-        <tr>
-          <td>SSC</td>
-          <td>Shailkupa Government Pilot High School</td>
-          <td>2018</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills" class="reveal">
-  <h1>Skills</h1>
+  <h1 data-key="skillsTitle">Skills</h1>
+
   <div class="grid">
     <div class="card">
-      <h3>Language</h3>
-      <p>English, Japanese, Bangla, Hindi/Urdu</p>
+      <h3 data-key="langTitle">Language</h3>
+      <p data-key="langText">English, Japanese, Bangla, Hindi/Urdu</p>
     </div>
+
     <div class="card">
-      <h3>Technical</h3>
-      <p>Swift, iOS Dev, HTML, Web Basics</p>
+      <h3 data-key="techTitle">Technical</h3>
+      <p data-key="techText">Swift, iOS Dev, HTML, Web Basics</p>
     </div>
+
     <div class="card">
-      <h3>Soft Skills</h3>
-      <p>Discipline, Adaptability, Work Ethic</p>
+      <h3 data-key="softTitle">Soft Skills</h3>
+      <p data-key="softText">Discipline, Adaptability, Work Ethic</p>
     </div>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience" class="reveal">
-  <h1>Experience</h1>
+  <h1 data-key="expTitle">Experience</h1>
+
   <div class="grid">
     <div class="card">
-      <h3>Part-time Job</h3>
-      <p>Teamwork, responsibility, Japanese work culture.</p>
+      <h3 data-key="jobTitle">Part-time Job</h3>
+      <p data-key="jobText">Teamwork, responsibility, Japanese work culture.</p>
     </div>
+
     <div class="card">
-      <h3>Student Life</h3>
-      <p>Focused on development + Japanese skills.</p>
+      <h3 data-key="studentTitle">Student Life</h3>
+      <p data-key="studentText">Focused on development + Japanese skills.</p>
     </div>
   </div>
 </section>
 
 <!-- HOBBY -->
 <section id="hobby" class="reveal">
-  <h1>Hobby</h1>
+  <h1 data-key="hobbyTitle">Hobby</h1>
+
   <div class="grid">
     <div class="card">
-      <h3>Traveling</h3>
-      <p>Visited many places including Mt. Fuji.</p>
+      <h3 data-key="travelTitle">Traveling</h3>
+      <p data-key="travelText">Visited many places including Mt. Fuji.</p>
     </div>
+
     <div class="card">
-      <h3>Movies</h3>
-      <p>Love action, sci-fi, documentaries.</p>
+      <h3 data-key="movieTitle">Movies</h3>
+      <p data-key="movieText">Love action, sci-fi, documentaries.</p>
     </div>
   </div>
 </section>
 
 <!-- GALLERY -->
 <section id="gallery" class="reveal">
-  <h1>Gallery</h1>
+  <h1 data-key="galleryTitle">Gallery</h1>
+
   <div class="grid">
     <img src="IMG_9091.jpg" alt="">
     <img src="IMG_Travel1.JPG" alt="">
@@ -174,9 +193,12 @@
 
 <!-- CONTACT -->
 <section id="contact" class="reveal">
-  <button class="btn" id="contactBtn">Contact Me</button>
+  <button class="btn" id="contactBtn" data-key="contactBtn">
+    Contact Me
+  </button>
 
   <div class="contact-popup" id="contactPopup">
+
     <a href="mailto:i.erik.ryan14@gmail.com">
       <i class="fa-solid fa-envelope"></i>
     </a>
@@ -184,29 +206,167 @@
     <a href="https://www.linkedin.com/in/rahman44fizz" target="_blank">
       <i class="fa-brands fa-linkedin"></i>
     </a>
+
     <a href="https://www.facebook.com/share/18NAPFos25/?mibextid=wwXIfr" target="_blank">
       <i class="fa-brands fa-facebook"></i>
     </a>
+
     <a href="tel:+819012345678">
-  <i class="fa-solid fa-phone"></i>
-  <span>+81 70-9122-2537</span>
-</a>
+      <i class="fa-solid fa-phone"></i>
+      <span>+81 70-9122-2537</span>
+    </a>
+
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer>
+<footer data-key="footer">
   © 2026 All Rights Reserved By Rahman Mustafizur.
 </footer>
 
-<!-- SCRIPTS (ALL FIXED) -->
+<!-- SCRIPT -->
 <script>
+
+  // TRANSLATIONS
+  const translations = {
+
+    en: {
+      navAbout: "About",
+      navQualification: "Qualification",
+      navSkills: "Skills",
+      navExperience: "Experience",
+      navHobby: "Hobby",
+      navGallery: "Gallery",
+      navContact: "Contact",
+
+      hero1: "Student in Tokyo",
+      hero2: "Part-time Worker",
+      hero3: "Focused on growth and building a career in Japan",
+
+      aboutTitle: "About Me",
+      aboutText: "I am a 23-year-old Bangladeshi student based in Tokyo, balancing academic studies and a part-time job daily. I am currently learning Japanese and adapting to a professional environment in Japan.",
+
+      qualificationTitle: "Qualifications",
+      tableTitle: "Education",
+
+      degree: "Degree",
+      institution: "Institution",
+      year: "Year",
+
+      degree1: "Bachelor of Science",
+
+      skillsTitle: "Skills",
+      langTitle: "Language",
+      langText: "English, Japanese, Bangla, Hindi/Urdu",
+
+      techTitle: "Technical",
+      techText: "Swift, iOS Dev, HTML, Web Basics",
+
+      softTitle: "Soft Skills",
+      softText: "Discipline, Adaptability, Work Ethic",
+
+      expTitle: "Experience",
+      jobTitle: "Part-time Job",
+      jobText: "Teamwork, responsibility, Japanese work culture.",
+
+      studentTitle: "Student Life",
+      studentText: "Focused on development + Japanese skills.",
+
+      hobbyTitle: "Hobby",
+      travelTitle: "Traveling",
+      travelText: "Visited many places including Mt. Fuji.",
+
+      movieTitle: "Movies",
+      movieText: "Love action, sci-fi, documentaries.",
+
+      galleryTitle: "Gallery",
+
+      contactBtn: "Contact Me",
+
+      footer: "© 2026 All Rights Reserved By Rahman Mustafizur."
+    },
+
+    ja: {
+      navAbout: "私について",
+      navQualification: "学歴",
+      navSkills: "スキル",
+      navExperience: "経験",
+      navHobby: "趣味",
+      navGallery: "ギャラリー",
+      navContact: "連絡先",
+
+      hero1: "東京在住の学生",
+      hero2: "アルバイト勤務",
+      hero3: "日本でのキャリア形成と成長に集中しています",
+
+      aboutTitle: "私について",
+      aboutText: "私は東京在住の23歳のバングラデシュ人留学生です。学業とアルバイトを両立しながら、日本語と日本の職場環境について学んでいます。",
+
+      qualificationTitle: "学歴・資格",
+      tableTitle: "学歴",
+
+      degree: "学位",
+      institution: "学校",
+      year: "年度",
+
+      degree1: "理学士",
+
+      skillsTitle: "スキル",
+      langTitle: "言語",
+      langText: "英語、日本語、ベンガル語、ヒンディー語/ウルドゥー語",
+
+      techTitle: "技術",
+      techText: "Swift、iOS開発、HTML、Web基礎",
+
+      softTitle: "ソフトスキル",
+      softText: "規律性、適応力、仕事への姿勢",
+
+      expTitle: "経験",
+      jobTitle: "アルバイト",
+      jobText: "チームワーク、責任感、日本の職場文化を経験。",
+
+      studentTitle: "学生生活",
+      studentText: "自己成長と日本語能力向上に集中。",
+
+      hobbyTitle: "趣味",
+      travelTitle: "旅行",
+      travelText: "富士山を含む多くの場所を訪問しました。",
+
+      movieTitle: "映画",
+      movieText: "アクション、SF、ドキュメンタリーが好きです。",
+
+      galleryTitle: "ギャラリー",
+
+      contactBtn: "お問い合わせ",
+
+      footer: "© 2026 Rahman Mustafizur All Rights Reserved."
+    }
+  };
+
+  // LANGUAGE FUNCTION
+  function setLanguage(lang) {
+
+    document.documentElement.lang = lang;
+
+    document.querySelectorAll("[data-key]").forEach(element => {
+      const key = element.getAttribute("data-key");
+      element.textContent = translations[lang][key];
+    });
+
+    localStorage.setItem("language", lang);
+  }
+
+  // LOAD SAVED LANGUAGE
+  const savedLang = localStorage.getItem("language") || "en";
+  setLanguage(savedLang);
+
   // Reveal animation
   const reveals = document.querySelectorAll(".reveal");
 
   window.addEventListener("scroll", () => {
     reveals.forEach(el => {
       const top = el.getBoundingClientRect().top;
+
       if (top < window.innerHeight - 100) {
         el.classList.add("active");
       }
@@ -223,11 +383,78 @@
 
   // Progress bar
   window.addEventListener("scroll", () => {
+
     const scrollTop = document.documentElement.scrollTop;
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+    const height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+
     const scrolled = (scrollTop / height) * 100;
-    document.getElementById("progress-bar").style.width = scrolled + "%";
+
+    document.getElementById("progress-bar").style.width =
+      scrolled + "%";
   });
+
+</script>
+
+<script>
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+
+  let current = "";
+
+  sections.forEach(section => {
+
+    const sectionTop = section.offsetTop - 150;
+    const sectionHeight = section.clientHeight;
+
+    if (scrollY >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+
+  });
+
+  navLinks.forEach(link => {
+
+    link.classList.remove("active");
+
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+
+  });
+
+});
+
+</script>
+
+
+<script>
+
+function setLanguage(lang) {
+
+  document.documentElement.lang = lang;
+
+  document.querySelectorAll("[data-key]").forEach(element => {
+    const key = element.getAttribute("data-key");
+    element.textContent = translations[lang][key];
+  });
+
+  localStorage.setItem("language", lang);
+
+  // active language button
+  document.querySelectorAll(".lang-switch button").forEach(btn => {
+    btn.classList.remove("active");
+  });
+
+  document.querySelector(
+    `.lang-switch button[onclick="setLanguage('${lang}')"]`
+  ).classList.add("active");
+}
 </script>
 
 </body>
